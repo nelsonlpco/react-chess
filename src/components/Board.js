@@ -11,6 +11,7 @@ import BoardTile from './BoardTile';
 class Board extends Component {
     renderTile = (y, x) => 
     (
+        <div>
         <BoardTile
             key={`${x}${y}`} 
             x={x} 
@@ -24,6 +25,7 @@ class Board extends Component {
                     null
             }
         </BoardTile>
+        </div>
     )
 
     render(){
