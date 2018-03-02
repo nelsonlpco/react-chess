@@ -42,8 +42,6 @@ class BoardTile extends Component {
 
     render() {
         const {x, y, connectDropTarget, isOver, canDrop} = this.props;
-        
-        console.log('arqui', x, y)
         return connectDropTarget(
             <div  className="board-tile">
                 <Tile x={x} y={y}>{this.props.children}</Tile>
@@ -57,7 +55,7 @@ class BoardTile extends Component {
 
 const mapStateToProps = state => {
     return {
-        k: state.AppReducer.k
+        k: state.AppReducer.white.knightLeft
     }
 }
 

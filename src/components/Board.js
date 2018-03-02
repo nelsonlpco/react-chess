@@ -16,10 +16,10 @@ class Board extends Component {
             key={`${x}${y}`} 
             x={x} 
             y={y}
-            onClick={() => moveKnight(this.props.k, x, y)}
+            onClick={() => moveKnight(x, y)}
         >
             {
-                (this.props.k[0] === y && this.props.k[1] === x) ?
+                (this.props.knight.y === y && this.props.knight.x === x) ?
                     <Knight/>
                     :
                     null
@@ -52,7 +52,7 @@ class Board extends Component {
 const mapStateToProps = state => {
     return {
         tiles: state.AppReducer.tiles,
-        k: state.AppReducer.k
+        knight: state.AppReducer.white.knightLeft
      }
 }
 

@@ -5,9 +5,7 @@ import {DragSource} from 'react-dnd';
 
 const KnightSource = {
     beginDrag(props) {
-        console.log('eita')
         return {
-            
         };
     }
 }
